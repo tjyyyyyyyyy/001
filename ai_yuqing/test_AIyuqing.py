@@ -11,7 +11,7 @@ class TestCorpTap:
     def test_get_corp_tag_list(self):
         r = self.yuqing.news()
         print(r.json())
-        assert r.status_code == 300
+        assert r.status_code == 200
         assert r.json().get("ok") == True
 
     def test_get_pure_index(self):
