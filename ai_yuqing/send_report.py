@@ -10,6 +10,7 @@ class DingRobot:
         self.ding = 'https://oapi.dingtalk.com/robot/send?access_token=' \
                     "797722368bdfac79d1529712213055416b3b2a310c8aa471a46c695e5e6807c7"
         self.error = self.get_allure()
+        self.key = "tiamo"
 
     def get_allure(self):
         jenkins_data = requests.get(self.allure).json()
@@ -23,7 +24,7 @@ class DingRobot:
                 "msgtype": "text",
                 "text": {
                     "text": "账号tjy,密码tjy010801",
-                    "title": "tiamo" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    "title": self.key + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                     "picUrl": "",
                     "messageUrl": "http://tjy:tjy010801@39.107.125.156:9000/job/wework/allure/"
                 }
