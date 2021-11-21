@@ -27,4 +27,4 @@ class TestCorpTap:
 
     def test_get_create(self):
         r = self.yuqing.create()
-        assert r.status_code == 200
+        assert r.status_code == 300
