@@ -26,7 +26,7 @@ class DingRobot:
                     "text": "账号tjy,密码tjy010801",
                     "title": self.key + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                     "picUrl": "",
-                    "messageUrl": "http://tjy:tjy010801@39.107.125.156:9000/job/wework/allure/"
+                    "messageUrl": "http://tjy:tjy010801@39.107.125.156:9000/job/tjyyy/allure"
                 }
             }
             response = requests.post(self.ding, headers=headers, data=json.dumps(content))
