@@ -23,8 +23,8 @@ class TestCorpTap:
         s = self.yuqing.create()
         id = s.json().get("id")
         r = self.yuqing.delete(id)
-        assert r.status_code == 200
+        assert r.status_code == 400
 
     def test_get_create(self):
         r = self.yuqing.create()
-        assert r.status_code == 300
+        assert r.status_code == 200
